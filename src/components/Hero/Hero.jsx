@@ -48,7 +48,7 @@ const Hero = () => {
 
       <div className="wrapper">
 
-    <div className="nav">
+    <nav className="nav">
       {/* <div className="logo"><img src={Logo} alt="" /></div> */}
       <div className="menu-links">
         <ul>
@@ -59,7 +59,7 @@ const Hero = () => {
           <li>Contact</li>
         </ul>
       </div>
-    </div>
+    </nav>
       </div>
       <motion.hr className="border-bottom"
       initial={{width: '0%'}}
@@ -141,8 +141,8 @@ const Hero = () => {
          initial={{opacity: 0, width: 0,}}
          animate={{
            opacity: 1,
-           width: mobile ? '180px' : '280px',
-           height: mobile ? '260px' : '450px'
+           width: mobile ? '120px' : '280px',
+           height: mobile ? '220px' : '450px'
           }}
           transition={{duration: 0.4, delay: 2.4, ease: 'easeInOut'}}
         ></motion.div>

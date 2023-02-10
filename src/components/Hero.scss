@@ -1,0 +1,148 @@
+/* ============== BACKGROUND ====== */
+
+$color-gradient-gold: linear-gradient(120deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+
+.container {
+  position: relative;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 15fr 20fr 10fr 10fr;
+  grid-template-rows: 10fr 15fr 25fr;
+  grid-gap: 0.5vh;
+  z-index: 1;
+}
+
+.img {
+  background-image: url("../../public/images/tony.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  cursor: pointer;
+/* 
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../public/images/tony_gogo_redbull.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    z-index: -1;
+  } */
+}
+
+
+
+.other-img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  background-image: url("../../public/images/tony_gogo_redbull.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+  overflow: hidden;
+  cursor: pointer;
+/* 
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    z-index: -1;
+    background: linear-gradient(120deg, rgba(0, 0, 0, 0.272), rgba(255, 255, 255, 0.256));
+  } */
+  h2 {
+    font-size: 2rem;
+    color: white;
+  }
+}
+.no-img.flex_col {
+  flex-direction: column;
+  h2 {
+    margin: 0.5rem 0;
+  }
+}
+
+.tony_vid_text {
+  width: 100%;
+
+  h1 {
+    background-image: $color-gradient-gold;
+    background-size: 100%;
+    font-size: clamp(2rem, 2vw, 6rem);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    text-transform: uppercase;
+    text-align: center;
+    transition: transform 1s ease;
+    font-family: 'Roboto', sans-serif;
+    filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.616));
+    cursor: pointer;
+  }
+  h2 {
+    background-image: $color-gradient-gold;
+    background-size: 100%;
+    font-size: clamp(1rem, 1.6vw, 2rem);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    text-transform: uppercase;
+    text-align: center;
+    transition: transform 1s ease;
+    font-family: 'Roboto', sans-serif;
+    filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.616));
+  }
+}
+
+.video {
+  margin: 1rem auto;
+  width: 100%;
+  height: 60vh;
+
+  @media screen and (min-width: 960px) {
+      margin: 1rem 10%;
+      width: 60%;
+      height: 80vh;
+  }
+}
+
+@keyframes gradientAni {
+  from {
+    background: linear-gradient(120deg, black, white);
+    transform: rotate(0deg);
+    transform-origin: center;
+  }
+  to {
+    transform: rotate(360deg);
+    background: linear-gradient(120deg, white, black);
+  }
+}
+
+.overlay {
+  position: absolute;
+  z-index: 2;
+  background: radial-gradient(ellipse at bottom, rgba(195, 184, 184, 0.231), rgba(5, 2, 26, 0.396));
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0.5;
+  pointer-events: none;
+}

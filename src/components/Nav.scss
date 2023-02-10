@@ -1,0 +1,35 @@
+.nav {
+    position:absolute;
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-color: transparent;
+    
+    .nav_menu {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        .nav_item {
+            list-style-type: none;
+            padding: 0 2rem;
+            
+            .nav_links {
+                font-family: SourceProLight;
+                text-decoration: none;
+                font-weight: 100;
+                color: #f8f8f8;
+                font-size: clamp(1rem, 1.2vw, 1.5rem);
+                text-transform: uppercase;
+
+                &:hover {
+                    color: #ebe8ec;
+                    text-shadow: 2px 2px 1px #f8f8f8;
+                }
+            }
+        }
+    }
+}
+
+

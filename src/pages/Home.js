@@ -4,8 +4,12 @@ import { useRef } from 'react'; */
 /* import ProjectMenu from "../components/ProjectMenu"; */
 /* import vid from '../media/video/video.mp4'; */
 // styles
+
 import './Home.scss';
 import Hero from '../components/Hero/Hero';
+import Carousel from '../components/carousel/Carousel';
+
+
 
 export default function Home() {
   /*  const [sound, setSound] = useState(false); */
@@ -17,6 +21,10 @@ export default function Home() {
       {/* <div className="project-container" id="work">
         <ProjectMenu />
       </div> */}
+      <section>
+          <Carousel />
+      </section>
+     
     </div>
   );
 }

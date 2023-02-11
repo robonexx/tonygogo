@@ -1,0 +1,116 @@
+.contact {
+    margin: 4rem auto;
+    max-width: 800px;
+    overflow-x: hidden;
+
+    h2 {
+        color: white;
+        font-family: SourcePro;
+    }
+
+
+    
+    .contact_form {
+        margin: 4rem auto;
+        width: 90%;
+        height: 600px;
+        border: 1px solid #888;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        
+    
+        .input_field {
+            position: relative;
+            margin: 0.5rem auto 0.5rem;
+            width: 80%;
+
+
+
+            .check_icon {
+                position: absolute;
+               margin-left: 1rem;
+                opacity: 0;
+
+                &:last-child {
+                    top: 0;
+                }
+            }
+        }
+    
+        input,
+        textarea {
+            position: relative;
+            padding: 0.25rem 0.5rem;
+            color: white;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #888;
+            width: 100%;
+    
+            &[type="textarea"] {
+                height: 200px;
+                border: 1px solid #888;
+            }
+    
+        }
+
+        input[type="submit"] {
+            margin: 1rem auto 0;
+            height: 30px;
+            width: 40%;
+            background-color: transparent;
+            color: #888;
+        
+            &:hover {
+                transition: all 0.4s ease-out;
+                color: black;
+                background-color: #ededed;
+                cursor: pointer;
+
+            }
+        }
+    
+    label {
+        margin: 0.25rem auto 0.25rem;   
+        text-align: left;
+        color: white;
+        width: 80%;
+
+    }
+        
+    input:invalid {
+    border-bottom: 1px solid rgb(232, 134, 134);
+    }
+
+    input:valid {
+        color: #21daa3;
+        border-bottom: #93d3c0 1px solid;
+
+        &[type="submit"] {
+            color: #888;
+        }
+
+        ~.check_icon {
+            opacity: 1;
+        }
+        }
+
+        textarea:invalid {
+            border: 1px solid rgb(232, 134, 134);
+        }
+        textarea:valid {
+            border: 1px solid  rgb(176, 229, 176);
+
+            ~.check_icon {
+                opacity: 1;
+            }
+        }
+
+         > form:valid input[type="submit"] {
+            background-color:  rgb(176, 229, 176);
+          }
+
+    }
+}

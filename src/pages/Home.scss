@@ -1,13 +1,13 @@
 .home {
     position: relative;
-    width: 100vw;
-
+    min-height: 100vh;
 
     > .container {
         height: 100vh;
         padding: 0;
         box-sizing: border-box;
         position: relative;
+        
         video {
             position: absolute;
             top: 0;
@@ -54,4 +54,17 @@ button {
     z-index: 100;
 }
 
-    
+.components_wrapper {
+    margin-top: 100vh;
+    position: relative;
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    background-color: #41b3a3;
+    border-radius: 3px;
+    box-shadow: 1px 4px 2px 1px rgba(0,0,0,0.335);
+}
+
+section {
+    width: 100%;
+    min-height: 600px;
+}

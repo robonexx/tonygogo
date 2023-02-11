@@ -23,7 +23,7 @@ const Hero = () => {
   const mobile = useIsMobile()
 
   return (
-    <motion.div>hero2
+    <motion.div className='hero'>
       <motion.div className="overlay first"
         initial={{}}
         animate={{
@@ -56,7 +56,7 @@ const Hero = () => {
           <li>News</li>
           <li>Music</li>
           <li>Videos</li>
-          <li>Contact</li>
+          <li><a href='/contact'>Contact</a></li>
         </ul>
       </div>
     </nav>

@@ -55,10 +55,20 @@ button {
 }
 
 section {
-    margin: 0 auto;
+    position: relative;
+    margin: 0 auto 20vh;
     width: 90%;
+    min-height: 600px;
+
+    p {
+        position: absolute;
+        color: #ededed;
+        z-index: 10;
+        top: -5px;
+    }
 
     @media screen and (min-width: 768px) {
+        margin-top: 200px;
         width: 60%;
     }
 }

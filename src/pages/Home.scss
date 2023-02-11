@@ -56,19 +56,29 @@ button {
 
 section {
     position: relative;
-    margin: 0 auto 20vh;
+    margin: 100px auto 20vh;
     width: 90%;
     min-height: 600px;
+
+    h2 {
+        font-family: 'Roboto', sans-serif;
+        font-size: clamp(60px, 8vw, 120px);
+        text-transform: uppercase;
+        overflow: hidden;
+        white-space: nowrap;
+        color: #ededed;
+    }
 
     p {
         position: absolute;
         color: #ededed;
         z-index: 10;
-        top: -5px;
+        bottom: -5px;
+        left: 0;
     }
 
     @media screen and (min-width: 768px) {
-        margin-top: 200px;
+        margin-top: 400px;
         width: 60%;
     }
 }

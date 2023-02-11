@@ -28,7 +28,7 @@ const Contact = () => {
         subject: ${formData.subject} \n
         message: ${formData.message}`) */
       
-        emailjs.sendForm(process.env.REACT_APP_SENDER_ID, process.env.REACT_APP_TEMP_TG, form.current, process.env.REACT_APP_KEY)
+        emailjs.sendForm(process.env.REACT_APP_SENDER_ID, process.env.REACT_APP_TEMP_ID, form.current, process.env.REACT_APP_KEY)
       .then((result) => {
         console.log(result.text);
         form.current.reset();

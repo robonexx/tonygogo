@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Logo from '../../assets/images/gogologo.png'
 import { useIsMobile } from '../../hooks/useMediaQuery'
 import { motion } from 'framer-motion'
@@ -56,7 +57,7 @@ const Hero = () => {
           <li>News</li>
           <li>Music</li>
           <li>Videos</li>
-          <li><a href='/contact'>Contact</a></li>
+          <li><Link to='/contact'>Contact</Link></li>
         </ul>
       </div>
     </nav>

@@ -19,8 +19,9 @@ export default function Home() {
         <ProjectMenu />
       </div> */}
       <section>
-        <p>Hover 3sec to play video or drag to check the other videos</p>
+        <h2>VIDEOS</h2>
         <Carousel />
+        <p>Hover or Touch 3s to play video</p>
       </section>
       <section></section>
     </div>

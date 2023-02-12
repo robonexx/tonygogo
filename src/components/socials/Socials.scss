@@ -1,0 +1,23 @@
+
+ .socials {
+    margin: 2rem auto 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+    -ms-flex-pack: distribute;
+      justify-content: space-around;
+    }
+    
+    .socials a {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: var(--social-icons);
+    }
+    
+   .socials a:hover {
+    color: #888888;
+    }

@@ -1,5 +1,5 @@
-/* ============== BACKGROUND ====== */
-
+/* /* ============== BACKGROUND ====== */
+/* 
 $color-gradient-gold: linear-gradient(120deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
 
 .container {
@@ -22,21 +22,6 @@ $color-gradient-gold: linear-gradient(120deg, #BF953F, #FCF6BA, #B38728, #FBF5B7
   background-position: center top;
   background-attachment: fixed;
   cursor: pointer;
-/* 
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../../public/images/tony_gogo_redbull.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
-    background-attachment: fixed;
-    z-index: -1;
-  } */
 }
 
 
@@ -54,17 +39,7 @@ $color-gradient-gold: linear-gradient(120deg, #BF953F, #FCF6BA, #B38728, #FBF5B7
     background-attachment: fixed;
   overflow: hidden;
   cursor: pointer;
-/* 
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height:100%;
-    z-index: -1;
-    background: linear-gradient(120deg, rgba(0, 0, 0, 0.272), rgba(255, 255, 255, 0.256));
-  } */
+
   h2 {
     font-size: 2rem;
     color: white;
@@ -146,3 +121,4 @@ $color-gradient-gold: linear-gradient(120deg, #BF953F, #FCF6BA, #B38728, #FBF5B7
   opacity: 0.5;
   pointer-events: none;
 }
+ */

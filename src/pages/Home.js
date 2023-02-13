@@ -14,14 +14,15 @@ export default function Home() {
   return (
     <div id='home' className='home'>
       <Hero />
-
       {/* <div className="project-container" id="work">
         <ProjectMenu />
       </div> */}
       <section>
         <h2>VIDEOS</h2>
-        <Carousel />
-        <p>Hover or Touch 3s to play video</p>
+        <div id='videos'>
+          <Carousel />
+        </div>
+       {/*  <p>Hover or Touch 3s to play video</p> */}
       </section>
       <section></section>
     </div>

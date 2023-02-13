@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Logo from '../../assets/images/gogologo.png'
-import { useIsMobile } from '../../hooks/useMediaQuery'
+import { useIsDesktop } from '../../hooks/useMediaQuery'
 import { motion } from 'framer-motion'
 import {FiArrowDownCircle} from 'react-icons/fi'
 /* import Img1 from '../../assets/images/tg_cap.jpg'
@@ -14,67 +13,18 @@ const text_item = {
   hidden: { opacity: 0 },
   visible: {
     opacity: [0, 0, 1],
-    scaleX: [-1, 1],
     transition: { duration: 0.4 },
   },
 };
 
 const Hero = () => {
 
-  const mobile = useIsMobile()
+  const desktop = useIsDesktop()
 
   return (
     <motion.div className='hero'>
-      <motion.div className="overlay first"
-        initial={{}}
-        animate={{
-          top: '-100vh',          
-        }}
-        transition={{duration: 0.4, delay: .2, ease: 'easeInOut'}}
-      ></motion.div>
-      <motion.div className="overlay second"
-      initial={{}}
-      animate={{
-        top: '-100vh',         
-        }}
-        transition={{duration: 0.4, delay: .4, ease: 'easeInOut'}}
-      ></motion.div>
-      <motion.div className="overlay third"
-      initial={{}}
-      animate={{
-        top: '-100vh',         
-        }}
-        transition={{duration: 0.4, delay: .6, ease: 'easeInOut'}}
-      ></motion.div>
-
-      <div className="wrapper">
-
-    <nav className="nav">
-      {/* <div className="logo"><img src={Logo} alt="" /></div> */}
-      <div className="menu-links">
-        <ul>
-          <li>Home</li>
-          <li>News</li>
-          <li>Music</li>
-          <li>Videos</li>
-          <li><Link to='/contact'>Contact</Link></li>
-        </ul>
-      </div>
-    </nav>
-      </div>
-      <motion.hr className="border-bottom"
-      initial={{width: '0%'}}
-      animate={{delay: 1.2,
-        width: '100%',
-          ease: 'easeInOut'
-        }}
-        transition={{duration: 1.6, delay: 0.3, ease: 'easeInOut'}}
-      />
-
-  <div className="content">
-
     <div className="text">
-          <motion.p className="subtitle"
+          <motion.p className="hero_subtitle"
           initial={{opacity: 0, x: -400,}}
             animate={{
               opacity: 1,
@@ -82,22 +32,25 @@ const Hero = () => {
             }}
             transition={{duration: 0.4, delay: 1.2, ease: 'easeInOut'}}
           >A living Legend</motion.p>
-          <motion.h1 className="title"
+          <motion.h1 className="hero_title"
            initial={{opacity: 0, x: -200,}}
            animate={{
              opacity: 1,
              x: 0,
              width: '100%',
             }}
-            transition={{duration: 1, delay: 1.6, ease: 'easeInOut',  delayChildren: 0.3,
-            staggerChildren: 0.2,}}
-          >
-            <span
-           variants={text_item}
-            >TONY </span><br />
-            <span
-           variants={text_item}
-            > GOGO</span>
+            transition={{duration: .8, delay: 1.6, ease: 'easeInOut',}}
+          >TONY
+      </motion.h1>
+          <motion.h1 className="hero_title"
+           initial={{opacity: 0, x: 200,}}
+           animate={{
+             opacity: 1,
+             x: 0,
+             width: '100%',
+            }}
+            transition={{duration: 0.8, delay: 1.8, ease: 'easeInOut',}}
+          >GOGO
       </motion.h1>
           <motion.p className="desc"
              initial={{opacity: 0 }}
@@ -105,60 +58,54 @@ const Hero = () => {
                opacity: 1,
                width: '100%',
               }}
-              transition={{duration: 1, delay: 1.8, ease: 'easeInOut'}}
+              transition={{duration: 1.2, delay: 2, ease: 'easeInOut'}}
           >
             Tony GoGo is a pioneer & innovator in the dance & artform of  style locking <br /> A LEGEND</motion.p>
-          <motion.a href="#" className="readmore"
+          <motion.div
+          className="readmore"
           initial={{opacity: 0, width: 0,}}
           animate={{
             opacity: 1,
-            width: '180px',
+            width: '12rem',
            }}
            transition={{duration: 0.4, delay: 2.4, ease: 'easeInOut'}}
-          ><FiArrowDownCircle className='icon' /></motion.a>
+          >
+            <Link to="#videos">
+            <FiArrowDownCircle className='icon' />
+            </Link>
+          </motion.div>
     </div>
 
-        <motion.div className="img-1"
-         initial={{opacity: 0, width: 0,}}
+        <motion.div className="img_1"
+        initial={{
+          opacity: 0, width: 0}}
          animate={{
            opacity: 1,
-           width: mobile ? '200px' : '450px',
-           height: mobile ? '300px' : '600px'
+           width: desktop ? '45rem' : '20rem',
+           height: desktop ? '50rem' : '16rem'
           }}
           transition={{duration: 0.4, delay: 2, ease: 'easeInOut'}}
         ></motion.div>
 
-    <div className="slider">
-      <div className="arrows">
-        <ul>
-          <li><i className="fa fa-arrow-left"></i></li>
-          <li><i className="fa fa-arrow-right"></i></li>
-        </ul>
-      </div>
-      <div className="pages"><span>01</span>/04</div>
-    </div>
-
-        <motion.div className="img-2"
+        <motion.div className="img_2"
          initial={{opacity: 0, width: 0,}}
          animate={{
            opacity: 1,
-           width: mobile ? '120px' : '280px',
-           height: mobile ? '220px' : '450px'
+           width: desktop ? '20rem' : '8rem',
+           height: desktop ? '30rem' : '12rem'
           }}
           transition={{duration: 0.4, delay: 2.4, ease: 'easeInOut'}}
         ></motion.div>
 
-        <motion.div className="img-3"
+        <motion.div className="img_3"
          initial={{opacity: 0, width: 0,}}
          animate={{
            opacity: 1,
-           width: mobile ? '180px' : '280px',
-           height: mobile ? '260px' : '560px'
+           width: desktop ? '35rem' : '10rem',
+           height: desktop ? '30rem' : '20rem'
           }}
           transition={{duration: 0.4, delay: 2.2, ease: 'easeInOut'}}
         ></motion.div>
-
-  </div>
 
       </motion.div>
   )

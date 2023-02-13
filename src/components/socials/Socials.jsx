@@ -1,14 +1,19 @@
 import React from 'react'
-import { FiLinkedin, FiGithub, FiCodepen } from 'react-icons/fi';
+import { FiLinkedin, FiFacebook, FiInstagram } from 'react-icons/fi';
+import { motion } from 'framer-motion'
 
 // styles
 import './Socials.scss'
 
 const Socials = () => {
   return (
-    <div className='socials'>
-          <a
-            href='https://www.linkedin.com/in/robert-w%C3%A4gar-1b4661139/'
+    <motion.div className='socials'
+    initial={{x: -100, opacity: 0}}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{duration: 1, delay: 2.3}}
+    >
+      <a
+            href='https://www.linkedin.com/in/tony-gogo-5a8430a/'
             target='_blank'
             rel='noreferrer noopener'
           >
@@ -17,22 +22,22 @@ const Socials = () => {
           </a>
 
           <a
-            href='https://github.com/robonexx'
+            href='https://www.facebook.com/profile.php?id=100013249814960'
             target='_blank'
             rel='noreferrer noopener'
           >
-            <FiGithub className='soc-item soc-icon' />
+            <FiFacebook className='soc-item soc-icon' />
           </a>
           <a
-            href='https://codepen.io/robonexx'
+            href='https://www.instagram.com/tonygogo_anthony/'
             target='_blank'
             rel='noreferrer noopener'
           >
-            <FiCodepen className='soc-item soc-icon' />
+            <FiInstagram className='soc-item soc-icon' />
           </a>
 
           
-        </div>
+        </motion.div>
   )
 }
 

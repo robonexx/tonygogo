@@ -1,12 +1,13 @@
-import React from 'react'
+import React from 'react';
+import LOGOIMG from '../../assets/images/gogologo.png';
 
 // styles
-import './Logo.scss'
+import './Logo.scss';
 
 export default function Logo() {
   return (
       <div className='logo'>
-          <h2>Logo</h2>
+         <img src={LOGOIMG} alt="" />
     </div>
   )
 }

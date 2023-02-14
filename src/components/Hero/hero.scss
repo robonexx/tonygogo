@@ -4,6 +4,7 @@
   height: 100vh;
   position: relative;
   z-index: 1;
+  font-family: SourceProLight;
 
   @media(min-width: 768px) {
     margin-top: 0;
@@ -58,7 +59,7 @@
   }
   
   .hero_title {
-    font-family: 'Roboto', sans-serif;
+    font-family: SourceProBold;
     font-size: clamp(4rem, 6vw, 10rem);
     line-height: 1;
     text-transform: uppercase;

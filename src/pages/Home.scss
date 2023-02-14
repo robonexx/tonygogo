@@ -55,14 +55,14 @@ button {
 
 section {
     position: relative;
-    margin: 100px auto 20vh;
+    margin: 100px auto 2rem;
     width: 80%;
     min-height: 600px;
     height: 100%;
 
     h2 {
         font-family: 'Roboto', sans-serif;
-        font-size: clamp(60px, 8vw, 120px);
+        font-size: clamp(4rem, 8vw, 10rem);
         text-transform: uppercase;
         overflow: hidden;
         white-space: nowrap;

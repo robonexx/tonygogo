@@ -18,7 +18,7 @@ const VideoCarousel = () => {
     let dragWidth = sWidth - offset */
 
     useEffect(() => {
-        console.log(elRef.current.scrollWidth, )
+       /*  console.log(elRef.current.scrollWidth, ) */
       setWidth(elRef.current.scrollWidth - elRef.current.offsetWidth)
     }, [width])
 
@@ -28,7 +28,7 @@ const VideoCarousel = () => {
             e.target.children[2].style.pointerEvents = 'fill'
         }, 4000)
        
-        console.log(e.target.children[2])
+       /*  console.log(e.target.children[2]) */
         clearTimeout(() => {
             e.target.children[2].style.pointerEvents = 'none'
         }, 1000)

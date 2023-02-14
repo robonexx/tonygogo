@@ -2,14 +2,37 @@ import React, { useState, useRef } from 'react'
 import emailjs from '@emailjs/browser';
 import {motion} from 'framer-motion'
 import { FcCheckmark } from 'react-icons/fc'
-
+import Modal from '../../components/modal/Modal';
+import IMG from '../../assets/images/tony.png'
 
 // styles
 import './contact.scss'
 
+const ModalContent = () => {
+  return (
+    <div style={{width: '80%', margin: '3rem auto', display: 'grid', placeContent: 'center'}}>
+      <h2 style={{color: 'white'}}>Thanks for your mail!</h2>
+      <p style={{ color: 'white' }}>I'll get back to you as soon as possible :D</p>
+      <img src={IMG} alt="" style={{
+        position: 'absolute',
+        left: '0',
+        top: '0',
+        opacity: '0.5',
+        zIndex: '-1',
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover'
+      }} />
+    </div>
+  );
+};
+
 const Contact = () => {
     /* const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' }) */
-    
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const close = () => setModalOpen(false);
+  const open = () => setModalOpen(true);
   const form = useRef();
   
 /* 
@@ -100,9 +123,17 @@ const Contact = () => {
             required />
           <span className='check_icon'><FcCheckmark /></span>
         </div>
-          <input className="submit_btn" type="submit" name="submit" value="Submit" />
-          
-    </motion.form>
+        <input className="submit_btn" type="submit" name="submit" value="Submit"
+        onClick={() => (modalOpen ? close() : open())}
+        />
+      </motion.form>
+      {modalOpen && (
+        <Modal
+          modalOpen={modalOpen}
+          handleClose={close}
+          content={<ModalContent />}
+        ></Modal>
+        )}
     </div>
   )
 }

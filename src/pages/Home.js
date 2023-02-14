@@ -7,6 +7,7 @@ import { useRef } from 'react'; */
 import './Home.scss';
 import Hero from '../components/Hero/Hero';
 import Carousel from '../components/carousel/Carousel';
+import About from '../components/about/About';
 
 export default function Home() {
   /*  const [sound, setSound] = useState(false); */
@@ -23,8 +24,8 @@ export default function Home() {
           <Carousel />
         </div>
        {/*  <p>Hover or Touch 3s to play video</p> */}
-      </section>
-      <section></section>
+      </section>     
+        <About />      
     </div>
   );
 }

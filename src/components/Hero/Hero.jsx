@@ -7,15 +7,8 @@ import {FiArrowDownCircle} from 'react-icons/fi'
 import Img2 from '../../assets/images/tg_jd.png'
 import Img3 from '../../assets/images/tony_gogo_redbull.png' */
 
+// styles
 import './hero.scss'
-
-const text_item = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: [0, 0, 1],
-    transition: { duration: 0.4 },
-  },
-};
 
 const Hero = () => {
 

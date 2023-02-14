@@ -9,21 +9,22 @@ import Socials from './components/socials/Socials';
 import { navData } from './assets/data/pageData';
 
 // pages
+import Landing from './pages/landing/Landing';
 import Home from './pages/Home';
 import About from './pages/about/About';
+import Events from './pages/eventspage/Events';
 import Contact from './pages/contact/Contact';
 
 // styles
 import './app.scss';
-import Events from './pages/eventspage/Events';
 
 function App() {
   const [active, setActive] = useState(false);
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
 
   useEffect(() => {
     setActive(false); // Close the navigation panel
-  }, [ pathname ]);
+  }, [pathname]);
   return (
     <div className='App'>
       <motion.div
@@ -61,6 +62,7 @@ function App() {
       <Socials />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/landing' element={<Landing />} />
         <Route path='/about' element={<About />} />
         <Route path='/events' element={<Events />} />
         <Route path='/contact' element={<Contact />} />

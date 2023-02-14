@@ -1,11 +1,17 @@
 import React from 'react'
+import LogoSvg from '../../components/logosvg/LogoSvg'
 
 // styles
 import './Landing.scss'
 
+
 const Landing = () => {
   return (
-    <div>Landing</div>
+    <div className='landing'>
+      landingpage
+
+      <LogoSvg />
+    </div>
   )
 }
 

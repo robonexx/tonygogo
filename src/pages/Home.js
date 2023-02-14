@@ -19,7 +19,7 @@ export default function Home() {
       {/* <div className="project-container" id="work">
         <ProjectMenu />
       </div> */}
-      <section>
+      <section id='media'>
         <h2>Gallery</h2>
         <div id='videos'>
           <ImageCarousel />

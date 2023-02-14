@@ -15,6 +15,7 @@ import Contact from './pages/contact/Contact';
 
 // styles
 import './app.scss';
+import Events from './pages/eventspage/Events';
 
 function App() {
   const [active, setActive] = useState(false);
@@ -61,6 +62,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
+        <Route path='/events' element={<Events />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
     </div>

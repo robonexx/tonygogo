@@ -20,8 +20,8 @@ export const navData = [
     id: 2,
   },
   {
-    title: 'media',
-    path: '/#media',
+    title: 'events',
+    path: '/events',
     cls: 'nav_item',
     id: 3,
   },

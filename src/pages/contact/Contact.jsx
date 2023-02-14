@@ -1,7 +1,8 @@
 import React, { useState, useRef } from 'react'
 import emailjs from '@emailjs/browser';
+import {motion} from 'framer-motion'
+import { FcCheckmark } from 'react-icons/fc'
 
-import {FcCheckmark} from 'react-icons/fc'
 
 // styles
 import './contact.scss'
@@ -39,8 +40,26 @@ const Contact = () => {
 
   return (
     <div className='contact'>
-      <h2>Bookings and contact</h2>
-      <form className='contact_form' ref={form} onSubmit={handleSubmit}>
+      <motion.h2
+        initial={{x: -300, opacity: 0}}
+        animate={{x: 0, opacity: 1}}
+        transition={{duration: 0.4, delay: 0.4, ease: 'easeOut'}}
+      >Bookings</motion.h2>
+      <motion.h2
+      initial={{x: -300, opacity: 0}}
+      animate={{x: 0, opacity: 1}}
+      transition={{duration: 0.4, delay: 0.6, ease: 'easeOut'}}
+      >&</motion.h2>
+      <motion.h2
+      initial={{x: -300, opacity: 0}}
+      animate={{x: 0, opacity: 1}}
+      transition={{duration: 0.4, delay: 0.8, ease: 'easeOut'}}
+      >Contact</motion.h2>
+      <motion.form className='contact_form' ref={form} onSubmit={handleSubmit}
+       initial={{opacity: 0}}
+       animate={{opacity: 1}}
+       transition={{duration: 0.6, delay: 1, ease: 'easeOut'}}
+      >
         <label >Name</label>
         <div className='input_field'>
           <input
@@ -80,7 +99,7 @@ const Contact = () => {
         </div>
           <input type="submit" name="submit" value="Submit" />
           
-    </form>
+    </motion.form>
     </div>
   )
 }

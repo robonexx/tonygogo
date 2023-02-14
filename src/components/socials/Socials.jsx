@@ -1,5 +1,5 @@
 import React from 'react'
-import { FiLinkedin, FiFacebook, FiInstagram } from 'react-icons/fi';
+import { FiLinkedin, FiFacebook, FiInstagram, FiMail } from 'react-icons/fi';
 import { motion } from 'framer-motion'
 
 // styles
@@ -34,6 +34,11 @@ const Socials = () => {
             rel='noreferrer noopener'
           >
             <FiInstagram className='soc-item soc-icon' />
+          </a>
+          <a
+            href='/contact'
+          >
+            <FiMail className='soc-item soc-icon' />
           </a>
 
           

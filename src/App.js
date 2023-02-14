@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Header from './components/header/Header';
 import Logo from './components/logo/Logo';
@@ -10,6 +10,7 @@ import { navData } from './assets/data/pageData';
 
 // pages
 import Home from './pages/Home';
+import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
 
 // styles
@@ -17,6 +18,11 @@ import './app.scss';
 
 function App() {
   const [active, setActive] = useState(false);
+  const {pathname} = useLocation();
+
+  useEffect(() => {
+    setActive(false); // Close the navigation panel
+  }, [ pathname ]);
   return (
     <div className='App'>
       <motion.div
@@ -54,6 +60,7 @@ function App() {
       <Socials />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
     </div>

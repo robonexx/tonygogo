@@ -1,12 +1,10 @@
-import IMG1 from '../images/tony_history2.png'
-import IMG2 from '../images/tony_history5.png'
-import IMG3 from '../images/tony_history7.png'
+import IMG1 from '../images/tony_history2.png';
+import IMG2 from '../images/tony_history5.png';
+import IMG3 from '../images/tony_history7.png';
 
 const ytVid1 = '7GGETPlhSY0';
 const ytVid2 = 'ukJLxTC86aI';
 const ytVid3 = '5Ysep7NpBfI';
-
-
 
 export const navData = [
   {
@@ -17,13 +15,13 @@ export const navData = [
   },
   {
     title: 'about',
-    path: '/#about',
+    path: '/about',
     cls: 'nav_item',
     id: 2,
   },
   {
-    title: 'art',
-    path: '/#art',
+    title: 'media',
+    path: '/#media',
     cls: 'nav_item',
     id: 3,
   },
@@ -40,37 +38,37 @@ export const videoData = [
     name: 'Winner of Juste Debout 2019',
     details: 'Tony won juste debout 2019 in the locking category',
     id: 1,
-      vid: ytVid1,
-      vtime: '268'
+    vid: ytVid1,
+    vtime: '268',
   },
   {
     name: 'JUDGE DEMO WDC 2017',
     details: 'Judge Demo at WDC Finals world dance colloseum',
     id: 2,
-      vid: ytVid2,
-    vtime: '5'
+    vid: ytVid2,
+    vtime: '5',
   },
   {
     name: 'The Lockers',
     details: 'Tony performing with the lockers on the ',
     id: 3,
-      vid: ytVid3,
-    vtime: '150'
+    vid: ytVid3,
+    vtime: '150',
   },
-]
+];
 
 export const imageData = [
   {
     name: 'Tony',
     details: 'Peformance',
     id: 1,
-      img: IMG1,
+    img: IMG1,
   },
   {
     name: 'In country?',
     details: 'Tony exploring the city of',
     id: 2,
-      img: IMG2,
+    img: IMG2,
   },
   {
     name: 'The Lockers',
@@ -78,4 +76,4 @@ export const imageData = [
     id: 3,
     img: IMG3,
   },
-]
+];

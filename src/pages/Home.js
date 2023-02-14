@@ -4,12 +4,11 @@ import { useRef } from 'react'; */
 /* import ProjectMenu from "../components/ProjectMenu"; */
 import VideoCarousel from '../components/videocarousel/VideoCarousel';
 import ImageCarousel from '../components/imagecarousel/ImageCarousel';
-import About from '../components/about/About';
+import Bio from '../components/bio/Bio';
 
 // styles
 import './Home.scss';
 import Hero from '../components/Hero/Hero';
-
 
 export default function Home() {
   /*  const [sound, setSound] = useState(false); */
@@ -25,16 +24,16 @@ export default function Home() {
         <div id='videos'>
           <ImageCarousel />
         </div>
-       {/*  <p>Hover or Touch 3s to play video</p> */}
-      </section>     
+        {/*  <p>Hover or Touch 3s to play video</p> */}
+      </section>
       <section>
         <h2>VIDEOS</h2>
         <div id='videos'>
           <VideoCarousel />
         </div>
-       {/*  <p>Hover or Touch 3s to play video</p> */}
-      </section>     
-        <About />      
+        {/*  <p>Hover or Touch 3s to play video</p> */}
+      </section>
+      <Bio />
     </div>
   );
 }

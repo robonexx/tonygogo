@@ -93,7 +93,7 @@ const Carousel = () => {
                             className='video'
                             type='text/html'
                             src={`https://www.youtube-nocookie.com/embed/${vid}?start=${vtime}`}
-                            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture web-share allowfullscreen'
+                            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture  fullscreen'
                         ></iframe>
                                     </motion.div>
                   

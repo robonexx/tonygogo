@@ -1,48 +1,12 @@
 import {useRef, useEffect, useState} from 'react'
 import { motion } from 'framer-motion'
+import { videoData } from '../../assets/data/pageData'
 
-import IMG1 from '../../assets/images/tg_jd.png'
-import IMG2 from '../../assets/images/tg_cap.jpg'
-import IMG3 from '../../assets/images/tony_gogo_redbull.png'
-
-import {ImPlay} from 'react-icons/im'
 
 //styles
 import './Carousel.scss'
 
-const ytVid1 = '7GGETPlhSY0';
-const ytVid2 = 'ukJLxTC86aI';
-const ytVid3 = '5Ysep7NpBfI';
-
-const carousel_data = [
-    {
-      name: 'Winner of Juste Debout 2019',
-      details: 'Tony won juste debout 2019 in the locking category',
-      id: 1,
-        vid: ytVid1,
-        vtime: '268'
-    },
-    {
-      name: 'JUDGE DEMO WDC 2017',
-      details: 'Judge Demo at WDC Finals world dance colloseum',
-      id: 2,
-        vid: ytVid2,
-      vtime: '5'
-    },
-    {
-      name: 'The Lockers',
-      details: 'Tony performing with the lockers on the ',
-      id: 3,
-        vid: ytVid3,
-      vtime: '150'
-    },
-];
-  
-
-
-
-const Carousel = () => {
-
+const VideoCarousel = () => {
     const [width, setWidth] = useState(0)
 
     // use ref is like querySelector
@@ -83,7 +47,7 @@ const Carousel = () => {
           <motion.div className="inner_carousel"
               drag='x'
               dragConstraints={{right: 0, left: - width}}>
-              {carousel_data.map(({ name, details, id, vid, vtime }, i) => (
+              {videoData.map(({ name, details, id, vid, vtime }, i) => (
                   <motion.div className='item' key={id} onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                       <div className="item_name">{name}</div>
                       <div className="item_details">{details}</div>
@@ -105,4 +69,4 @@ const Carousel = () => {
   )
 }
 
-export default Carousel
+export default VideoCarousel

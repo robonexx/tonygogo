@@ -1,6 +1,7 @@
 import React from 'react'
 import { FiLinkedin, FiFacebook, FiInstagram, FiMail } from 'react-icons/fi';
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom';
 
 // styles
 import './Socials.scss'
@@ -35,11 +36,11 @@ const Socials = () => {
           >
             <FiInstagram className='soc-item soc-icon' />
           </a>
-          <a
-            href='/contact'
+          <Link
+            to='/contact'
           >
             <FiMail className='soc-item soc-icon' />
-          </a>
+          </Link>
 
           
         </motion.div>

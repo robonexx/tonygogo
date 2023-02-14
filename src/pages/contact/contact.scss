@@ -1,18 +1,24 @@
 .contact {
     margin: 4rem auto;
+    
     max-width: 800px;
     overflow-x: hidden;
 
     h2 {
         font-family: SourcePro;
         font-size: clamp(2rem, 4vw, 6rem);
-        color: white;
+        color: #ffa900;
+        text-transform: uppercase;
+
+        &:last-of-type {
+            margin-bottom: 5rem;
+        }
     }
 
 
     
     .contact_form {
-        margin: 4rem auto;
+        margin: 1rem auto;
         width: 70%;
         height: 600px;
         border: 1px solid #888;
@@ -20,14 +26,30 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
+
+        &:valid input[type="submit"] {
+            color: #ededee;
+            background-color: #ffa500;
+
+            &:hover {
+                transition: all 0.4s ease-in-out;
+                color: white;
+                background-color: #646c50;
+            }
+        }
+        &:invalid input[type="submit"] {
+            &:hover {
+                transition: all 0.4s ease-in-out;
+                color: black;
+                background-color: #e95749;
+            }
+        }
         
     
         .input_field {
             position: relative;
             margin: 0.25rem auto 0.5rem;
             width: 80%;
-
-
 
             .check_icon {
                 position: absolute;
@@ -47,7 +69,7 @@
             color: white;
             background-color: transparent;
             border: none;
-            border-bottom: 1px solid #888;
+            border-bottom: 1px solid;
             width: 100%;
     
             &[type="textarea"] {
@@ -57,37 +79,44 @@
     
         }
 
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-bottom: 1px solid #ededed;
+        }
+
         input[type="submit"] {
             margin: 1rem auto 0;
-            height: 30px;
+            padding: 1rem 2rem;
             width: 40%;
-            background-color: transparent;
+            font-size: 1rem;
             color: #888;
-        
-            &:hover {
-                transition: all 0.4s ease-out;
-                color: black;
-                background-color: #ededed;
-                cursor: pointer;
+            background-color: transparent;
+            border: 1px solid #888;
+            cursor: pointer;
 
-            }
+            /* &:hover {
+                    background-color: #ffa500;
+            } */
         }
     
     label {
         margin: 0.25rem auto 0.25rem;   
         text-align: left;
-        color: white;
+        color: #888;
         width: 80%;
-
     }
         
     input:invalid {
-    border-bottom: 1px solid rgb(232, 173, 173);
+        border-bottom-color: #5c5c5c;
+        ~.check_icon {
+            opacity: 0.3;
+        }
     }
 
     input:not([type='submit']):valid {
-        color: #ccefcc;
-        border-bottom: #ccefcc 1px solid;
+        outline: none;
+        border-bottom-color: #ffa500;
 
         ~.check_icon {
             opacity: 1;
@@ -95,21 +124,18 @@
         }
 
         textarea:invalid {
-            border: 1px solid rgb(242, 200, 200);
+            border: 1px solid #88888880;
+            ~.check_icon {
+                opacity: 0.3;
+            }
         }
         textarea:valid {
-            border: 1px solid  #ccefcc;
+            border: 1px solid  #ffa500;
 
             ~.check_icon {
                 opacity: 1;
             }
-        }
-
-         form:valid input[type="submit"] {
-            background-color:  rgb(176, 229, 176);
-            color: white;
-            border-bottom: 1px solid white;
-          }
+        }         
 
     }
 }

@@ -21,22 +21,25 @@ const Contact = () => {
   
 
     const handleSubmit = (e) => {
-        e.preventDefault()
+      /*   e.preventDefault()
       let isValid = e.target.checkValidity()
       console.log(isValid)
-        /* console.log(`name: ${formData.name} \n
-        email: ${formData.email}  \n
-        subject: ${formData.subject} \n
-        message: ${formData.message}`) */
-      
+           
         emailjs.sendForm(process.env.REACT_APP_SENDER_ID, process.env.REACT_APP_TEMP_ID, form.current, process.env.REACT_APP_KEY)
       .then((result) => {
         console.log(result.text);
         form.current.reset();
       }, (error) => {
           console.log(error.text);
-      });
-    }
+      }); */
+  }
+  
+   /* console.log(`name: ${formData.name} \n
+        email: ${formData.email}  \n
+        subject: ${formData.subject} \n
+        message: ${formData.message}`) 
+        
+    */
 
   return (
     <div className='contact'>
@@ -97,7 +100,7 @@ const Contact = () => {
             required />
           <span className='check_icon'><FcCheckmark /></span>
         </div>
-          <input type="submit" name="submit" value="Submit" />
+          <input className="submit_btn" type="submit" name="submit" value="Submit" />
           
     </motion.form>
     </div>

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { FiX } from 'react-icons/fi';
 
-import Backdrop from './Backdrop';
+import Backdrop from '../backdrop/Backdrop';
 import './Modal.scss';
 
 const dropIn = {

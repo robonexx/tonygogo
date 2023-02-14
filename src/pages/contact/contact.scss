@@ -1,6 +1,5 @@
 .contact {
-    margin: 4rem auto;
-    
+    margin: 2rem auto;    
     max-width: 800px;
     overflow-x: hidden;
 
@@ -11,22 +10,21 @@
         text-transform: uppercase;
 
         &:last-of-type {
-            margin-bottom: 10rem;
+            margin-bottom: 4rem;
         }
     }
 
 
     
     .contact_form {
-        margin: 1rem auto;
-        width: 70%;
+        margin: 0 auto;
+        width: 80%;
         height: 600px;
-        border: 1px solid #888;
+        /* border: 1px solid #888; */
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: center;
-
+        
         &:valid input[type="submit"] {
             color: #101010;
             background-color: #ffa500;
@@ -67,16 +65,16 @@
             position: relative;
             padding: 0.25rem 0.5rem;
             color: white;
+            font-size: 0.8rem;
             background-color: transparent;
             border: none;
             border-bottom: 1px solid;
             width: 100%;
     
             &[type="textarea"] {
-                height: 200px;
+                height: 20vh;
                 border: 1px solid #888;
-            }
-    
+            }    
         }
 
         input:focus,
@@ -89,7 +87,6 @@
             margin: 1rem auto 0;
             padding: 1rem 2rem;
             width: 40%;
-            font-size: 1rem;
             color: #888;
             background-color: transparent;
             border: 1px solid #888;

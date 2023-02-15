@@ -74,8 +74,8 @@ const Hero = () => {
           opacity: 0, width: 0}}
          animate={{
            opacity: 1,
-           width: desktop ? '45rem' : '20rem',
-           height: desktop ? '50rem' : '16rem'
+           width: desktop ? '60rem' : '80vw',
+           height: desktop ? '50rem' : '30vh'
           }}
           transition={{duration: 0.4, delay: 2, ease: 'easeInOut'}}
         ></motion.div>
@@ -84,8 +84,8 @@ const Hero = () => {
          initial={{opacity: 0, width: 0,}}
          animate={{
            opacity: 1,
-           width: desktop ? '20rem' : '8rem',
-           height: desktop ? '30rem' : '12rem'
+           width: desktop ? '20rem' : '40vw',
+           height: desktop ? '30rem' : '25vh'
           }}
           transition={{duration: 0.4, delay: 2.4, ease: 'easeInOut'}}
         ></motion.div>
@@ -94,8 +94,8 @@ const Hero = () => {
          initial={{opacity: 0, width: 0,}}
          animate={{
            opacity: 1,
-           width: desktop ? '35rem' : '10rem',
-           height: desktop ? '30rem' : '20rem'
+           width: desktop ? '35rem' : '40vw',
+           height: desktop ? '30rem' : '30vh'
           }}
           transition={{duration: 0.4, delay: 2.2, ease: 'easeInOut'}}
         ></motion.div>

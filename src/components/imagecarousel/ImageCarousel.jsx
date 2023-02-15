@@ -2,10 +2,10 @@ import {useRef, useEffect, useState} from 'react'
 import { motion } from 'framer-motion'
 import { imageData } from '../../assets/data/pageData'
 
-
-
 //styles
 import '../videocarousel/Carousel.scss'
+// swipe component
+import SwipeRightArrow from '../button/swipeRightArrow/SwipeRightArrow'
 
 const ImageCarousel = () => {
 
@@ -35,13 +35,13 @@ const ImageCarousel = () => {
                       <div className="item_details">{details}</div>
                       <img className='image_frame'
                         src={img} alt={name}
-                        ></img>
-                                    </motion.div>
+                  ></img>                 
+      </motion.div>
                   
               ))}
               
           </motion.div>
-          
+          <SwipeRightArrow />
     </motion.div>
   )
 }

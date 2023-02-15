@@ -5,6 +5,8 @@ import { videoData } from '../../assets/data/pageData'
 
 //styles
 import './Carousel.scss'
+// swipe component
+import SwipeRightArrow from '../button/swipeRightArrow/SwipeRightArrow'
 
 const VideoCarousel = () => {
     const [width, setWidth] = useState(0)
@@ -59,12 +61,11 @@ const VideoCarousel = () => {
                             src={`https://www.youtube-nocookie.com/embed/${vid}?start=${vtime}`}
                             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture  fullscreen'
                         ></iframe>
-                                    </motion.div>
-                  
+            </motion.div>                  
               ))}
               
-          </motion.div>
-          
+        </motion.div>
+        <SwipeRightArrow />
     </motion.div>
   )
 }
